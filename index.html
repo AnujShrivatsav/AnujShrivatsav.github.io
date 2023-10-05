@@ -90,6 +90,12 @@
 			.right-align {
 				text-align: right;
 			}
+			p {
+				color: gray
+			}
+				/* a {
+			color: lightgreen;
+			} */
 
 			/* .header-content {
 				position: absolute;
@@ -240,60 +246,57 @@
 							<h2>Recent Exciting Work</h2>
 						</header>
 						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<!--  -->
-								<!-- <a href="images/enc_gif.gif" class="image fit thumb"><img src="images/enc_gif.gif" alt="" /></a> -->
-								<a href="images/wall_gif.gif" class="image fit thumb"><img src="images/wall_gif.gif" alt="" /></a> 
-								<h3>Batch Informed Trees</h3>
-								<!-- <br> -->
-								<h6>Path Planning</h6>
-								<div class="work-links">
-									<a href="https://github.com/marleyshan21/Batch-informed-trees/blob/master/Batch_informed_trees.pdf" target="_blank">Report</a>
-									<a href="https://github.com/marleyshan21/Batch-informed-trees" target="_blank">Code</a>
-									<a href="https://youtu.be/JurQ1YLwIVY" target="_blank">Turtlebot3 Demo</a>
-									<a href="https://1drv.ms/p/s!AiYkRRrhfnuCkVzbbknyJE-WsNeL?e=4lao3E" target="_blank">Slides</a>
-								</div>
-								<div class="left-align">
-								<p>
-									<br>
 
-									Generally, we can divide the approximations used in path planning into 2 types: Search-based and Sampling-based.
-									<!-- Heuristics are used by search-based planners like A* to effectively search across graphs, but their efficiency is limited by the resolution of the selected approximation. To approximate the problem, sample-based planners such as RRT* employ random sampling. Here, the resolution can be increased until we find a suitable solution. These random samples approximate the region in all directions at the same time, making the search ineffective. -->
-									<br>
+
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/gvio.png" class="image fit thumb"><img src="images/gvio.png" alt="" height="310" /></a>
+								<h3> <br> Multi-Camera Visual-Inertial-GPS fusion <br> </h3>
+								<!-- <hr class="highlight-line">
+								<p class="highlight-text">Accepted to IEEE Robotics and Automation Letters Sep, 2023</p>
+								<hr class="highlight-line"> -->
+								<!-- <div class="work-links">
+									<a href="https://ieeexplore.ieee.org/document/10253964" target="_blank">Paper</a>
+									<a href="https://github.com/neufieldrobotics/MultiCamSLAM" target="_blank">Code</a>
+								</div> -->
+								<div class="left-align">
+								<p><br>
+									<br> 
 									
-									A recent approach called  <a href="https://journals.sagepub.com/doi/pdf/10.1177/0278364919890396">Batch Informed Trees (BIT*) </a>  combines the strengths of both search-based and sampling-based planners. 
-									<!-- Heuristics and Sampling is used by BIT* to alternate between searching and approximating.  -->
-									In this work, we have used the pseudo-code from the paper and coded the algorithm from scratch, and tested its performance in R2 space for different motion planning scenarios using a custom visualizer.
+									In this work, we've developed a non-linear optimization based system that tightly integrates GPS data,
+									inertial measurments and visual input from a multi camera setup. 
+									Building upon our Generic Visual SLAM framework for multi-camera setups, we utilize IMU preintegration
+									to summarize hundreds of inertial measurements into a single relative motion constraint. 
+									For achieving precise global localization, we've developed a custom GPS factor. 
+									This factor allows for real-time estimation of the transformation between the Visual-Inertial Odometry (VIO) frame 
+									and the GPS's ENU frame while accounting for the time offset between the sensors.  
 								</p>
+
 							</div>
-
-
 							</article>
+
+
+
 							<article class="col-6 col-12-xsmall work-item">
-								<div class="image-container">
-									<a href="images/state.png" class="image fit thumb"><img src="images/state.png" alt="" /></a>
-									<a href="images/state.png" class="image fit thumb"><img src="images/state_1.png" alt="" /></a>
-								</div>
-								<div class="left-align">
-								<h3> State Estimation: Issues During Indoor-Outdoor Transitions</h3> 
-							</div>
-								<!-- <p>Sensor Fusion</p> -->
+								<a href="images/slam_pipeline_.png" class="image fit thumb"><img src="images/slam_pipeline_.png" alt="" height="310" /></a>
+								<h3> Design and Evaluation of a Generic Visual SLAM Framework for Multi Camera Systems  </h3>
+								<hr class="highlight-line">
+								<p class="highlight-text">Accepted to IEEE Robotics and Automation Letters (Sep, 2023)</p>
+								<hr class="highlight-line">
 								<div class="work-links">
-									<a href="https://github.com/marleyshan21/StateEstimation-EECE5554/blob/main/report.pdf" target="_blank">Report</a>
-									<a href="https://github.com/marleyshan21/StateEstimation-EECE5554" target="_blank">Code</a>
+									<a href="https://ieeexplore.ieee.org/document/10253964" target="_blank">Paper</a>
+									<a href="https://github.com/neufieldrobotics/MultiCamSLAM" target="_blank">Code</a>
 								</div>
 								<div class="left-align">
-								<p>
-									
-									<br>
-									Understanding the state of the robot is a crucial element for autonomous navigation. 
-									Several papers investigate SLAM (Simultaneous Localization and Mapping) pipelines in either outdoor or interior contexts, or both. 
-									However, only a few works have looked at the difficulties that might develop when moving from an outdoor to an indoor setting 
-									or vice versa. 
-									In this project, we have explored some frequent problems faced when performing global state estimation during such environment 
-									transitions. 
-									This project used three key sensors: Stereo Camera, IMU, and RTK-GPS.</p>
-								</div>
+								<p><br>In this work, we present a generic sparse visual SLAM 
+									framework capable of running on any number of cameras and
+									in any arrangement. Our SLAM system uses the generalized
+									camera model, which allows us to represent an arbitrary multi-
+									camera system as a single imaging device. Our system can adapt to different
+									camera configurations and allows real-time execution for typical
+									robotic applications. 
+								</p>
+
+							</div>
 							</article>
 
 							<article class="col-6 col-12-xsmall work-item">
@@ -352,6 +355,65 @@
 
 							</div>
 							</article>
+
+
+							<article class="col-6 col-12-xsmall work-item">
+								<!--  -->
+								<!-- <a href="images/enc_gif.gif" class="image fit thumb"><img src="images/enc_gif.gif" alt="" /></a> -->
+								<a href="images/wall_gif.gif" class="image fit thumb"><img src="images/wall_gif.gif" alt="" /></a> 
+								<h3>Batch Informed Trees</h3>
+								<!-- <br> -->
+								<h6>Path Planning</h6>
+								<div class="work-links">
+									<a href="https://github.com/marleyshan21/Batch-informed-trees/blob/master/Batch_informed_trees.pdf" target="_blank">Report</a>
+									<a href="https://github.com/marleyshan21/Batch-informed-trees" target="_blank">Code</a>
+									<a href="https://youtu.be/JurQ1YLwIVY" target="_blank">Turtlebot3 Demo</a>
+									<a href="https://1drv.ms/p/s!AiYkRRrhfnuCkVzbbknyJE-WsNeL?e=4lao3E" target="_blank">Slides</a>
+								</div>
+								<div class="left-align">
+								<p>
+									<br>
+
+									Generally, we can divide the approximations used in path planning into 2 types: Search-based and Sampling-based.
+									<!-- Heuristics are used by search-based planners like A* to effectively search across graphs, but their efficiency is limited by the resolution of the selected approximation. To approximate the problem, sample-based planners such as RRT* employ random sampling. Here, the resolution can be increased until we find a suitable solution. These random samples approximate the region in all directions at the same time, making the search ineffective. -->
+									<br>
+									
+									A recent approach called  <a href="https://journals.sagepub.com/doi/pdf/10.1177/0278364919890396">Batch Informed Trees (BIT*) </a>  combines the strengths of both search-based and sampling-based planners. 
+									<!-- Heuristics and Sampling is used by BIT* to alternate between searching and approximating.  -->
+									In this work, we have used the pseudo-code from the paper and coded the algorithm from scratch, and tested its performance in R2 space for different motion planning scenarios using a custom visualizer.
+								</p>
+							</div>
+
+
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<div class="image-container">
+									<a href="images/state.png" class="image fit thumb"><img src="images/state.png" alt="" /></a>
+									<a href="images/state.png" class="image fit thumb"><img src="images/state_1.png" alt="" /></a>
+								</div>
+								<div class="left-align">
+								<h3> State Estimation: Issues During Indoor-Outdoor Transitions</h3> 
+							</div>
+								<!-- <p>Sensor Fusion</p> -->
+								<div class="work-links">
+									<a href="https://github.com/marleyshan21/StateEstimation-EECE5554/blob/main/report.pdf" target="_blank">Report</a>
+									<a href="https://github.com/marleyshan21/StateEstimation-EECE5554" target="_blank">Code</a>
+								</div>
+								<div class="left-align">
+								<p>
+									
+									<br>
+									Understanding the state of the robot is a crucial element for autonomous navigation. 
+									Several papers investigate SLAM (Simultaneous Localization and Mapping) pipelines in either outdoor or interior contexts, or both. 
+									However, only a few works have looked at the difficulties that might develop when moving from an outdoor to an indoor setting 
+									or vice versa. 
+									In this project, we have explored some frequent problems faced when performing global state estimation during such environment 
+									transitions. 
+									This project used three key sensors: Stereo Camera, IMU, and RTK-GPS.</p>
+								</div>
+							</article>
+
+							
 
 
 							<article class="col-6 col-12-xsmall work-item">
