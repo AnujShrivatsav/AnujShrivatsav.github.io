@@ -1,2 +1,2 @@
-# anujshrivatsav.github.io
+# AnujShrivatsav.github.io
 My website
